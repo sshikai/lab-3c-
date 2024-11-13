@@ -1,0 +1,22 @@
+//zadanie1
+#include <iostream>
+
+int main() {
+	double k, p, r;
+	std::cout << "Введите сумму кредита (k), процентную ставку (p) и прибыль в год (r): ";
+	std::cin >> k >> p >> r;
+
+	int n = 0;
+	double dolg = k;
+
+	while (dolg > 0) {
+		n++;
+		dolg *= (1 + p / 100); 
+		dolg -= r; 
+	}
+
+	std::cout << "Предприниматель сможет погасить кредит через " << n << " лет.\n";
+	return 0;
+}
+
+//zadanie2
